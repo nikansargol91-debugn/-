@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>سایلو گالری</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="butterfly.png" alt="لوگوی پروانه" width="50">
+    <h1>سایلو گالری</h1>
+    <nav>
+      <button onclick="openSection('login')">ورود</button>
+      <button onclick="openSection('cart')">سبد خرید</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="carousel">
+      <p>اینجا اسلاید چرخان محصولات خواهد بود</p>
+    </div>
+    <div id="products"></div>
+  </main>
+
+  <!-- فرم ورود -->
+  <section id="login" class="hidden">
+    <h2>ورود</h2>
+    <input type="text" id="username" placeholder="نام کاربری">
+    <input type="password" id="password" placeholder="رمز عبور">
+    <button onclick="login()">ورود</button>
+  </section>
+
+  <!-- پنل مدیریت -->
+  <section id="admin" class="hidden">
+    <h2>پنل مدیریت</h2>
+    <input type="text" id="pCode" placeholder="کد محصول">
+    <input type="text" id="pName" placeholder="نام محصول">
+    <input type="number" id="pPrice" placeholder="قیمت">
+    <input type="text" id="pImage" placeholder="لینک عکس">
+    <input type="text" id="pCategory" placeholder="مد / دسته‌بندی">
+    <button onclick="addProduct()">افزودن محصول</button>
+    <button onclick="openSection('orders')">مشاهده سفارش‌ها</button>
+  </section>
+
+  <!-- سفارش‌ها -->
+  <section id="orders" class="hidden">
+    <h2>سفارش‌های کاربران</h2>
+    <ul id="ordersList"></ul>
+  </section>
+
+  <!-- سبد خرید -->
+  <section id="cart" class="hidden">
+    <h2>سبد خرید</h2>
+    <ul id="cartItems"></ul>
+    <button onclick="submitOrder()">ثبت درخواست</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
